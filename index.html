@@ -1,0 +1,120 @@
+<!-- 01010011 01011001 01010011 01010100 01000101 01001101
+=======================================================
+デ ザ イ ン シ ス テ ム // HTML PAGE
+=======================================================
+[VERSION]   : v0.1
+[DEPLOYED]  : 2026-10-28
+[SYSTEM]    : HTML5, CSS3, JS
+[LIBRARIES] : GSAP
+=======================================================
+01000100 01001111 01010111 01010011 01011000 01000111 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <!-- [DEFAULTs] ======================================================= -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="s.css">
+
+        <!-- [SITE CONFIG] ======================================================= -->
+        <title>SPRAY - Documentação</title>
+        <meta name="description" content="Crie QR Codes profissionais com páginas otimizadas para humanos e Inteligências Artificiais. Conheça o Spray, o estado da arte em QR Codes.">
+        <meta name="theme-color" content="#7FFF00">
+        <link rel="icon" href="emojious/arcade.png" type="image/x-icon">
+        <link rel="canonical" href="https://spray.codes/$/spray">
+
+        <!-- [FACEBOOK] ======================================================= -->
+        <meta property="og:title" content="Spray: Gerador de QR Codes Profissionais">
+        <meta property="og:description" content="Crie QR Codes profissionais com páginas otimizadas para humanos e Inteligências Artificiais.">
+        <meta property="og:image" content="https://spray.codes/cover.webp">
+        <meta property="og:url" content="https://spray.codes">
+        <meta property="og:type" content="website">
+
+        <!-- [CUSTOM STYLE] ======================================================= -->
+        <style>
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('spray/fonts/montserrat.ttf') format('truetype');
+                font-weight: 100 900;
+                font-style: normal;
+                font-display: swap;
+            }
+        </style>
+
+        <!-- [AI / JSON-LD] ======================================================= -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "{{URL_SITE}}/#organization",
+                    "name": "{{NOME_DO_CLIENTE}}",
+                    "url": "{{URL_SITE}}",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "{{URL_LOGO}}"
+                    }
+                },
+                {
+                    "@type": "SoftwareApplication",
+                    "@id": "{{URL_SITE}}/#software",
+                    "name": "{{NOME_DO_CLIENTE}}",
+                    "operatingSystem": "All",
+                    "applicationCategory": "BusinessApplication",
+                    "description": "{{DESCRICAO_CURTA}}",
+                    "publisher": {
+                        "@id": "{{URL_SITE}}/#organization"
+                    }
+                },
+                {
+                    "@type": "TechArticle",
+                    "@id": "{{URL_SITE}}/#article",
+                    "isPartOf": {
+                        "@type": "WebPage",
+                        "@id": "{{URL_CANONICAL}}"
+                    },
+                    "headline": "{{TITULO_PRINCIPAL_H1}}",
+                    "description": "{{DESCRICAO_LONGA}}",
+                    "inLanguage": "pt-BR",
+                    "datePublished": "2026-10-18",
+                    "author": {
+                        "@id": "{{URL_SITE}}/#organization"
+                    },
+                    "publisher": {
+                        "@id": "{{URL_SITE}}/#organization"
+                    },
+                    "about": {
+                        "@type": "Thing",
+                        "name": "{{NICHO_OU_TECNOLOGIA}}"
+                    }
+                }
+            ]
+        }
+        </script>
+    </head>
+
+    <body>
+        <!-- header -->
+        <header id="header">
+            <h1>Spray</h1>
+        </header>
+
+        <!-- main -->
+        <main id="main">
+
+        </main>
+
+        <!-- footer -->
+        <footer id="footer">
+
+        </footer>
+
+        <!-- scripts -->
+        <script src="s.js"></script>
+        <script src="libraries/gsap@3.15.min.js"></script>
+    </body>
+
+</html>
