@@ -18,7 +18,7 @@
 01000100 01001111 01010111 01010000 01011001 01000111
 */
 
-class DS_slides {
+class spray_slide {
     constructor(slidesElement, dotsElement) {
         this.carousel = slidesElement;
         this.dotsContainer = dotsElement;
@@ -102,5 +102,27 @@ class DS_slides {
         const x = e.clientX;
         const walk = x - this.startX;
         this.carousel.scrollLeft = this.scrollLeft - walk;
+    }
+}
+
+function sprayInsert() {
+    let z = document.getElementsByTagName("*");
+    for (let i = 0; i < z.length; i++) {
+        let elmnt = z[i];
+        let file = elmnt.getAttribute("s-insert");
+        if (file) {
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) elmnt.innerHTML = this.responseText;
+                    if (this.status == 404) elmnt.innerHTML = "Page not found.";
+                    elmnt.removeAttribute("s-insert");
+                    sprayInsert();
+                }
+            };
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+        }
     }
 }
