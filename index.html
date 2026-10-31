@@ -1,9 +1,9 @@
 <!-- 01010011 01011001 01010011 01010100 01000101 01001101
 =======================================================
-デ ザ イ ン シ ス テ ム // HTML PAGE
+スプレイ // HTML PAGE
 =======================================================
-[VERSION]   : v0.1
-[DEPLOYED]  : 2026-10-28
+[VERSION]   : v0.2
+[DEPLOYED]  : 2026-10-31
 [SYSTEM]    : HTML5, CSS3, JS
 [LIBRARIES] : GSAP
 =======================================================
@@ -19,10 +19,10 @@
         <link rel="stylesheet" href="s.css">
 
         <!-- [SITE CONFIG] ======================================================= -->
-        <title>SPRAY - Documentação</title>
+        <title>Documentação</title>
         <meta name="description" content="Crie QR Codes profissionais com páginas otimizadas para humanos e Inteligências Artificiais. Conheça o Spray, o estado da arte em QR Codes.">
         <meta name="theme-color" content="#7FFF00">
-        <link rel="icon" href="emojious/arcade.png" type="image/x-icon">
+        <link rel="icon" href="emojious/topview.png" type="image/x-icon">
         <link rel="canonical" href="https://spray.codes/$/spray">
 
         <!-- [FACEBOOK] ======================================================= -->
@@ -40,6 +40,36 @@
                 font-weight: 100 900;
                 font-style: normal;
                 font-display: swap;
+            }
+            header{
+                padding-left: var(--s-space4);
+                margin-top: 8px;
+            }
+            main{
+                position: absolute;
+                top: 0;
+                left: 370px;
+            }
+
+            textarea{
+                outline: none;
+                width: 600px;
+                height: auto;
+                color: slateblue;
+                background-color: ghostwhite;
+                resize: none;
+                padding-top: 10px;
+                padding-left: 10px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                border: 0;
+            }
+            textarea:hover{
+                background-color: var(--s-s2);
+            }
+            textarea:active{
+                color: var(--s-p3);
+                background-color: var(--s-s1);
             }
         </style>
 
@@ -99,12 +129,22 @@
     <body>
         <!-- header -->
         <header id="header">
-            <h1>Spray</h1>
+            <h1 class="super s-primary2">D0Cz.</h1>
+            <small>SPRAY•スプレイ デザインシステム</small>
+            <nav>
+                <ul>
+                    <li><a href="#">Como Funciona?</a></li>
+                    <li><a href="#">Shortcuts</a></li>
+                </ul>
+            </nav>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600" width="100" height="100" role="img" aria-label="Wu-Tang">
+                <path d="M 1346 410 L 1273 329 L 863 511 L 915 555 L 945 604 L 953 670 L 933 718 L 911 742 L 892 747 L 895 702 L 886 663 L 867 629 L 837 602 L 685 672 L 699 702 L 717 704 L 731 720 L 727 739 L 701 750 L 668 737 L 639 710 L 617 639 L 634 552 L 686 493 L 275 370 L 191 546 L 153 714 L 160 871 L 210 1016 L 295 1129 L 359 1179 L 433 1220 L 544 1260 L 647 1283 L 823 1292 L 844 1288 L 768 1143 L 753 1042 L 768 1007 L 791 987 L 838 972 L 868 976 L 901 1001 L 919 1033 L 936 1158 L 917 1281 L 863 1429 L 984 1394 L 1110 1337 L 1225 1260 L 1317 1166 L 1386 1060 L 1432 938 L 1449 835 L 1442 693 L 1402 530 Z" fill="#fff100" fill-rule="evenodd"/>
+            </svg>
         </header>
 
         <!-- main -->
         <main id="main">
-             <div s-insert="content/hello-world.html"></div> 
+            <section s-insert="content/shortcuts.html"></section> 
         </main>
 
         <!-- footer -->

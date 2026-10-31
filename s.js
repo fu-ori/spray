@@ -9,16 +9,16 @@
 ███████║██║     ██║  ██║██║  ██║   ██║   
 ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
 
-デ ザ イ ン シ ス テ ム // CSS MODULE
+スプレイ スクリプツ // JS MODULE
 =======================================================
-[VERSION]   : v0.1
-[DEPLOYED]  : 2026-10-18
-[SYSTEM]    : JAVASCRIPT VANILLA
+[VERSION]   : v0.2
+[DEPLOYED]  : 2026-10-31
+[SYSTEM]    : JAVASCRIPT
 =======================================================
 01000100 01001111 01010111 01010000 01011001 01000111
 */
 
-class spray_slide {
+class spraySlides {
     constructor(slidesElement, dotsElement) {
         this.carousel = slidesElement;
         this.dotsContainer = dotsElement;

@@ -9,10 +9,10 @@
 ███████║██║     ██║  ██║██║  ██║   ██║   
 ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   
 
-デ ザ イ ン シ ス テ ム // CSS MODULE
+スプレイ デザインシステム // CSS MODULE
 =======================================================
-[VERSION]   : v0.1
-[DEPLOYED]  : 2026-10-18
+[VERSION]   : v0.2
+[DEPLOYED]  : 2026-10-31
 [SYSTEM]    : CSS 3
 =======================================================
 01000100 01001111 01010111 01010000 01011001 01000111
@@ -42,8 +42,24 @@
 }
 
 /* =======================================================
-[SHORTCUTS]  :  ショートカッツ
+[SHORTCUTS]  :  ショートカット
 ======================================================= */
+.s-primary1{ color: var(--s-p1); }
+.s-primary2{ color: var(--s-p2); }
+.s-primary3{ color: var(--s-p3); }
+
+.s-secondary1{ color: var(--s-s1); }
+.s-secondary2{ color: var(--s-s2); }
+.s-secondary3{ color: var(--s-s3); }
+
+.s-primary1X{ background-color: var(--s-p1); }
+.s-primary2X{ background-color: var(--s-p2); }
+.s-primary3X{ background-color: var(--s-p3); }
+
+.s-secondary1X{ background-color: var(--s-s1); }
+.s-secondary2X{ background-color: var(--s-s2); }
+.s-secondary3X{ background-color: var(--s-s3); }
+
 .s-remove {
     display: none;
 }
@@ -51,10 +67,13 @@
 .s-triangle{
     width: 80px;
     height: 70px;
-    background-color: greenyellow;
+    background-color: var(--s-p3);
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
+.s-pad{
+    padding: var(--s-space4);
+}
 .s-logo-center{
     display: flex;
     justify-content: center;
@@ -72,7 +91,24 @@
 }
 
 /* =======================================================
-[GRIs]  :  グリッズ
+[HORIZONTAL RULE]  :  ホリゾンタルルール
+======================================================= */
+.s-hr {
+  border: none;
+  height: 1px;
+  background: #e5e5e5;
+}
+
+/* =======================================================
+[TITLES]  :  タイトルズ
+======================================================= */
+.super{
+    font-size: 7em;
+    font-weight: 100;
+}
+
+/* =======================================================
+[GRIDS]  :  グリッズ
 ======================================================= */
 .s-grid {
     display: flex;
@@ -94,7 +130,7 @@
 }
 
 /* =======================================================
-[BUTTONS]  :  ボタンズ
+[BUTTONS]  :  バトンズ
 ======================================================= */
 .s-button {
     display: inline-block;
@@ -150,7 +186,7 @@
 }
 
 /* =======================================================
-[SLIDES]  :  スライズ
+[SLIDES]  :  スライヅ
 ======================================================= */
 .s-slides {
     cursor: grab;
@@ -277,14 +313,15 @@ body {
 }
 
 a {
-    color: dodgerblue;
+    color: var(--s-p1);
     transition: all 0.5s ease-in-out;
 }
 
 a:hover {
-    color: red;
+    color: var(--s-p2);
 }
 
+small{ display: block; }
 img,
 picture,
 video,
@@ -299,6 +336,7 @@ h3,
 h4,
 h5,
 h6 {
+    padding-bottom: 3px;
     overflow-wrap: break-word;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -306,4 +344,10 @@ h6 {
 
 p {
     margin-block-start: 0;
+}
+ul{
+    list-style: decimal-leading-zero;
+}
+li{
+    margin-bottom: var(--s-space2);
 }
